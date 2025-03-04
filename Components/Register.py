@@ -23,6 +23,9 @@ sha256_hash.update(SenhaUser.encode('utf-8'))
 Senha_Hash = sha256_hash.hexdigest()
 print(Senha_Hash)
 
+encoding = locale.getencoding()
+print(encoding)
+
 #Pegar IP
 try:
     # Cria um socket para obter o endereço IP
