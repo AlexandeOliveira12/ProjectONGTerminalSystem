@@ -6,7 +6,7 @@ dados = {
     "email": Email,
     "password": Senha_Hash,
     "language": idioma,
-    "addressip": pegar_ip()
+    "addressip": EnderecoIP
 }
     
 # Ler os dados existentes

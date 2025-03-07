@@ -8,17 +8,13 @@ Nome = input("\nInsira seu Nome de Usuario: ")
 Email = input("Digite se Email: ")
 SenhaUser = pwinput.pwinput("Insira uma Senha: ",  mask="*")
 
-#Pega o Idioma
-idioma, _ = locale.getlocale()
-
 #Transforma a senha em Hash
 sha256_hash = sha256()
-
 sha256_hash.update(SenhaUser.encode('utf-8'))
-
 Senha_Hash = sha256_hash.hexdigest()
-print(Senha_Hash)
 
+#Pega o Idioma
+idioma, _ = locale.getlocale()
 
 #Pegar IP
 def pegar_ip():
@@ -45,4 +41,7 @@ def pegar_ip():
     return ip_address
 
 EnderecoIP = pegar_ip()
-print(EnderecoIP)
+
+
+
+
