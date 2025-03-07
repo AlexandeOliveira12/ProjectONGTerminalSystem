@@ -1,6 +1,8 @@
 import json
 from Components.Register import *
 
+# ------------------------------ INSERIR DADOS JSON ------------------------------
+
 dados = {
     "name": Nome,
     "email": Email,
@@ -22,3 +24,6 @@ data.append(dados)
 # Salvar de volta no arquivo
 with open("data.json", "w", encoding="utf-8") as arquivo:
     json.dump(data, arquivo, ensure_ascii=False, indent=4)
+    
+    
+# ------------------------------ ############### ------------------------------
