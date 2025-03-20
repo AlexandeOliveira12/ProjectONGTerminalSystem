@@ -6,9 +6,8 @@ from Components.Register import *
 dados = {
     "name": Nome,
     "email": Email,
-    "password": Senha_Hash,
-    "language": idioma,
-    "addressip": EnderecoIP
+    "password": senha_hash_base64,
+    "language": idioma
 }
     
 # Ler os dados existentes

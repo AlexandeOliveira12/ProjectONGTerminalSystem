@@ -1,0 +1,2 @@
+pwinput==1.0.3
+python_bcrypt==0.3.2

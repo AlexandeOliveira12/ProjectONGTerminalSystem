@@ -1,7 +1,7 @@
 import locale
-from hashlib import sha256
-import socket
+import bcrypt
 import pwinput
+import base64
 
 # ------------------------------ PEGAR DADOS BASICOS/TRANSFORMAR SENHA EM HASH/PEGAR IDIOMA ------------------------------
 
@@ -9,40 +9,20 @@ Nome = input("\nInsira seu Nome de Usuario: ")
 Email = input("Digite se Email: ")
 SenhaUser = pwinput.pwinput("Insira uma Senha: ",  mask="*")
 
-sha256_hash = sha256()
-sha256_hash.update(SenhaUser.encode('utf-8'))
-Senha_Hash = sha256_hash.hexdigest()
+def gerar_hash_bcrypt(SenhaUser):
+    # Gera o salt aleatorio
+    salt = bcrypt.gensalt()
+    
+    # Gera o hash da senha com o salt
+    senha_hash = bcrypt.hashpw(SenhaUser.encode('utf-8'), salt) 
+    
+    return senha_hash
+
+# Função para converter o hash para base64
+def hash_para_base64(senha_hash):
+    return base64.b64encode(senha_hash).decode('utf-8')
+
+senha_hash = gerar_hash_bcrypt(SenhaUser)
+senha_hash_base64 = hash_para_base64(senha_hash)
 
 idioma, _ = locale.getlocale()
-
-# ------------------------------ PEGAR IP DA MAQUINA ------------------------------
-
-#Pegar IP
-def pegar_ip():
-    try:
-        
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    
-        # Conecta-se a um servidor qualquer
-        s.connect(('8.8.8.8', 80))
-    
-        # Obtém o endereço IP do socket
-        ip_address = s.getsockname()[0]
-
-        s.close()
-        
-    except socket.error as e:
-        print(f"Erro ao obter o endereço IP: {e}")
-        ip_address = None
-        
-    finally:
-        # Fecha o socket
-        s.close()
-    
-    return ip_address
-
-EnderecoIP = pegar_ip()
-
-
-
-
