@@ -8,8 +8,7 @@ from Components.Register import *
 dados = {
     "name": Nome,
     "email": Email,
-    "password": senha_hash_base64,
-    "language": idioma
+    "password": senha_hash_base64
 }
     
 # Ler os dados existentes
@@ -36,7 +35,7 @@ def clear_screen():
 
 # SISTEMA DE ESCOLHAS DE CURSOS
 def menu_escolha():
-        print(f"\n🧠 olá {Nome} Seja Bem vindo ao Menu do Estudante")
+        print(f"\n 🧠olá {Nome} Seja Bem vindo ao Menu do Estudante\n")
         print("1️⃣  - Cursos Python")
         print("2️⃣  - Logica Programção")
         print("3️⃣  - Infraestrutura Computacional - Hardware")
@@ -46,7 +45,7 @@ def menu_escolha():
         # SISTEMA DE CURSOS PYTHON
         if escolha == 1:
             clear_screen()
-            print("\n📚 Qual curso quer assistir? ")
+            print("\n📚 Qual curso quer assistir?\n")
             print("1️⃣  - Curso em Video - Python")
             print("2️⃣  - Curso Gratuito de Python - Pietro Martins")
             print("3️⃣  - Python for Beginners - (Curso em Inglês)")
