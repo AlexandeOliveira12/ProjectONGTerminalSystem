@@ -63,3 +63,7 @@ python Aplication.py
 * pwinput (entrada de senha segura)
 
 * JSON (armazenamento de dados)
+
+# 📄 Documentação
+
+A documentação formal do projeto, seguindo as normas ABNT, pode ser acessada aqui: [Documentação](https://documentationpim.netlify.app)
