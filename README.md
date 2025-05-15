@@ -11,8 +11,6 @@ Este projeto é um sistema baseado em Python executado no terminal, que oferece 
 
 * Armazena a senha com hash seguro (bcrypt) e a converte para base64.
 
-* Detecta o idioma do sistema operacional.
-
 **Armazenamento de Dados:**
 
 * Salva os usuários cadastrados em um arquivo JSON.
