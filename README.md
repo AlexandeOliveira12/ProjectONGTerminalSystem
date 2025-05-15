@@ -30,8 +30,8 @@ Este projeto é um sistema baseado em Python executado no terminal, que oferece 
 **Clone o repositório**
 
 ```
-git clone https://github.com/AlexandeOliveira12/ProjectONGTerminalSystem.git
-cd ProjectONGTerminalSystem
+git clone https://github.com/AlexandeOliveira12/TerminalLearningHub.git
+cd TerminalLearningHub
 ```
 
 **Instale as dependências**
