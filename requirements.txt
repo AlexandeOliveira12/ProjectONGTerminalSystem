@@ -1,2 +1,6 @@
-pwinput==1.0.3
-python_bcrypt==0.3.2
+bcrypt==3.2.2
+json
+base64
+os
+sys
+webbroser
