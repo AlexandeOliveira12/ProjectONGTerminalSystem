@@ -89,7 +89,7 @@ def login_ou_cadastro():
                 exit()
 
     print("\n🆕 Usuário não encontrado. Criando novo cadastro...")
-    SenhaUser = mascarar_senha("Insira uma Senha para ciração (será utilizado o Nome e o Email fornecido acima): ")
+    SenhaUser = mascarar_senha("Insira uma Senha para criação (será utilizado Nome e Email fornecidos acima): ")
     senha_hash = gerar_hash_bcrypt(SenhaUser)
     senha_hash_base64 = hash_para_base64(senha_hash)
 
